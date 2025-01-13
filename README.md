@@ -1,5 +1,7 @@
 This repository contains code for calculating the anharmonic infrared (IR) spectrum of polycyclic aromatic hydrocarbons (PAHs) using a machine learning-based molecular dynamics (MLMD) approach. The method employs two distinct machine learning (ML) models:
+
 Neural Network Force Field (NNFF) [doi:10.1021/acs.jcim.1c01380]: Used to construct the potential energy surface.
+
 Electron Passing Neural Network (EPNN) [doi:10.1021/acs.jcim.0c01071]: Used to predict the molecular dipole moment.
 
 Overview of the Process:
