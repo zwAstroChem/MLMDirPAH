@@ -16,7 +16,7 @@ Authors: Xinghong Mai, Zhao Wang, Lijun Pan, XX, XX, Jesus Carrete, and Georg K.
 The code is available at: https://github.com/zwAstroChem/MLMDirPAH
 
 Citation: 
-If you use this code to generate data, please cite the article and acknowledge the code in your publications. For inquiries, you can contact Prof. Zhao Wang at zw@gxu.edu.cn.
+If you use this code to generate data, please cite the article and acknowledge the code in your publications. For inquiries, you can contact Prof. Zhao Wang at zw[at]gxu.edu.cn.
 
 
 ---------------------------
