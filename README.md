@@ -7,7 +7,7 @@ Electron Passing Neural Network (EPNN) [doi:10.1021/acs.jcim.0c01071]: Used to p
 Overview of the Process:
 To compute the anharmonic IR spectrum, molecular dynamics (MD) simulations are performed to obtain atomic configurations (trajectories) during molecular vibrations. These configurations are generated using atomic forces predicted by the NNFF model. The resulting atomic trajectories are then used by the EPNN model to calculate the dipole moments at each time step. The dipole time-autocorrelation function is subjected to a Fourier transform to derive the IR intensity.
 
-Both the NNFF and EPNN models are pre-trained and ready for immediate use, so no additional machine learning training is required. 
+Both the NNFF and EPNN models are pre-trained and ready for immediate use, so no additional ML training is required. 
 
 For more information on the training of these models and the MD simulations, please refer to the following article:
 
