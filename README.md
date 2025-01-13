@@ -29,7 +29,7 @@ I. Installation with Anaconda
 conda create -n MLMD_env python=3.10.13 # Create a virtual environment
 conda activate MLMD_env # Activate the virtual environment
 
-2. Install the required packages:
+3. Install the required packages:
 a) Navigate to the lib/learned_optimization directory and install the optimizer:
 pip install -e . 
 b) Install NNFF:
@@ -39,7 +39,7 @@ c) Install EPNN:
 cd lib/epnn-main
 pip install -e . 
 
-3. Install additional libraries:
+4. Install additional libraries:
 pip install flax==0.7.4
 pip install optax==0.1.7
 pip install orbax-checkpoint==0.4.1
@@ -49,7 +49,7 @@ pip install chex==0.1.84
 pip install oryx==0.2.7
 Note: You may encounter version incompatibility warnings, which can be safely ignored.
 
-4. Install JAX and JAXLib (CPU version):
+5. Install JAX and JAXLib (CPU version):
 pip install jax[cpu]==0.4.19 -f https://storage.googleapis.com/jax-releases/jax_releases.html
 pip install jaxlib==0.4.19 -f https://storage.googleapis.com/jax-releases/jax_releases.html
 Note: Note: If version incompatibilities occur, you can ignore them. For specific library versions, refer to the environment.yaml file. After installation, use pip list to confirm JAX and JAXLib are both version 0.4.19. If not, repeat the installation Step 4.
