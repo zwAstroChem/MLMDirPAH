@@ -33,27 +33,45 @@ conda activate MLMD_env # Activate the virtual environment
 
 3. Install the required packages:
 a) Navigate to the lib/learned_optimization directory and install the optimizer:
-pip install -e . 
+
+pip install -e .
+
 b) Install NNFF:
+
 cd lib/bessel-nn-potentials-velo
-pip install -e . 
-c) Install EPNN:
-cd lib/epnn-main
+
 pip install -e . 
 
-4. Install additional libraries:
+c) Install EPNN:
+
+cd lib/epnn-main
+
+pip install -e . 
+
+5. Install additional libraries:
+
 pip install flax==0.7.4
+
 pip install optax==0.1.7
+
 pip install orbax-checkpoint==0.4.1
+
 pip install numpy==1.26.1
+
 pip install scipy==1.11.3
+
 pip install chex==0.1.84
+
 pip install oryx==0.2.7
+
 Note: You may encounter version incompatibility warnings, which can be safely ignored.
 
-5. Install JAX and JAXLib (CPU version):
+7. Install JAX and JAXLib (CPU version):
+8. 
 pip install jax[cpu]==0.4.19 -f https://storage.googleapis.com/jax-releases/jax_releases.html
+
 pip install jaxlib==0.4.19 -f https://storage.googleapis.com/jax-releases/jax_releases.html
+
 Note: Note: If version incompatibilities occur, you can ignore them. For specific library versions, refer to the environment.yaml file. After installation, use pip list to confirm JAX and JAXLib are both version 0.4.19. If not, repeat the installation Step 4.
 
 II. Running the Program
