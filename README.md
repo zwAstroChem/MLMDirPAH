@@ -32,6 +32,7 @@ conda create -n MLMD_env python=3.10.13 # Create a virtual environment
 conda activate MLMD_env # Activate the virtual environment
 
 2. Install the required packages:
+   
 a) Navigate to the lib/learned_optimization directory and install the optimizer:
 
 pip install -e .
@@ -77,6 +78,7 @@ Note: Note: If version incompatibilities occur, you can ignore them. For specifi
 II. Running the Program
 
 1. Data Preparation:
+
 Place the .xyz files for the molecules you wish to compute in the ./inputs/XYZ/ directory.
 Example: C10H8_330.xyz (from the original dataset).
 The .xyz file format consists of:
@@ -85,6 +87,7 @@ Line 2: Comment line.
 Lines 3 and beyond: Each line contains the atom type (e.g., C for carbon) and its Cartesian coordinates (x, y, z) in Angstrom.
 
 2. MLMD Calculations
+
 On Linux:
 
 Modify the TEMPERATURE variable on line 4 of code/run_calc.sh to set the desired simulation temperature.
@@ -101,6 +104,7 @@ b) Dipole Moment Calculation: The script runs code/2_calc_dipole.py to calculate
 c) IR Spectrum Calculation: The script runs code/3_calc_IR.py to compute the IR spectrum using a Fourier transform of the dipole time-autocorrelation function. Each molecule's IR spectrum calculation typically completes in a few seconds.
 
 On Windows:
+
 Navigate to the code/ directory and run the following commands:
 
 python 1_MD_calc_position.py 50  # Set temperature to 50 K
@@ -113,7 +117,8 @@ Each python program will process each .xyz file in the ./inputs/XYZ/ directory o
 
 III. Output Files
 
-1. IR Spectrum: 
+1. IR Spectrum:
+   
 The computed IR spectrum will be saved in the ./outputs/IR_txt/ folder.
 
 Example: ./outputs/IR_txt/C10H8_330.txt contains two columns:
