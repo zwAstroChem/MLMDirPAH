@@ -97,11 +97,11 @@ Run the script:
 
 This script performs the following: 
 
-a) MD Simulations: The script runs code/1_MD_calc_position.py to perform MD simulations, generating atomic trajectories at the specified temperature. Progress bars will indicate the current molecule being processed and the simulation phase (NVT and NVE). The simulation for molecules like C10H8 takes around 16 hours.
+a) MD Simulations: The script runs code/1_MD_calc_position.py to perform MD simulations, generating atomic trajectories at the specified temperature. Progress bars will indicate the current molecule being processed and the simulation phase (NVT and NVE). The simulation for molecules like C10H8 takes around 16 hours on a single core.
 
-b) Dipole Moment Calculation: The script runs code/2_calc_dipole.py to calculate time-evolved dipole moments based on atomic trajectories. Progress bars will display the progress for 400,000 time steps. For molecules like C10H8, this step takes approximately 32 hours.
+b) Dipole Moment Calculation: The script runs code/2_calc_dipole.py to calculate time-evolved dipole moments based on atomic trajectories. Progress bars will display the progress for 400,000 time steps. For molecules like C10H8, this step takes approximately 32 hours on a single core.
 
-c) IR Spectrum Calculation: The script runs code/3_calc_IR.py to compute the IR spectrum using a Fourier transform of the dipole time-autocorrelation function. Each molecule's IR spectrum calculation typically completes in a few seconds.
+c) IR Spectrum Calculation: The script runs code/3_calc_IR.py to compute the IR spectrum using a Fourier transform of the dipole time-autocorrelation function. Each molecule's IR spectrum calculation typically completes in a few seconds on a single core.
 
 On Windows:
 
