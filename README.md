@@ -31,7 +31,7 @@ conda create -n MLMD_env python=3.10.13 # Create a virtual environment
 
 conda activate MLMD_env # Activate the virtual environment
 
-3. Install the required packages:
+2. Install the required packages:
 a) Navigate to the lib/learned_optimization directory and install the optimizer:
 
 pip install -e .
@@ -48,7 +48,7 @@ cd lib/epnn-main
 
 pip install -e . 
 
-5. Install additional libraries:
+3. Install additional libraries:
 
 pip install flax==0.7.4
 
@@ -66,7 +66,7 @@ pip install oryx==0.2.7
 
 Note: You may encounter version incompatibility warnings, which can be safely ignored.
 
-7. Install JAX and JAXLib (CPU version):
+4. Install JAX and JAXLib (CPU version):
 
 pip install jax[cpu]==0.4.19 -f https://storage.googleapis.com/jax-releases/jax_releases.html
 
@@ -86,31 +86,45 @@ Lines 3 and beyond: Each line contains the atom type (e.g., C for carbon) and it
 
 2. MLMD Calculations
 On Linux:
+
 Modify the TEMPERATURE variable on line 4 of code/run_calc.sh to set the desired simulation temperature.
-Run the script: ./code/run_calc.sh
+
+Run the script: 
+./code/run_calc.sh
+
 This script performs the following: 
+
 a) MD Simulations: The script runs code/1_MD_calc_position.py to perform MD simulations, generating atomic trajectories at the specified temperature. Progress bars will indicate the current molecule being processed and the simulation phase (NVT and NVE). The simulation for molecules like C10H8 takes around 16 hours.
+
 b) Dipole Moment Calculation: The script runs code/2_calc_dipole.py to calculate time-evolved dipole moments based on atomic trajectories. Progress bars will display the progress for 400,000 time steps. For molecules like C10H8, this step takes approximately 32 hours.
+
 c) IR Spectrum Calculation: The script runs code/3_calc_IR.py to compute the IR spectrum using a Fourier transform of the dipole time-autocorrelation function. Each molecule's IR spectrum calculation typically completes in a few seconds.
 
 On Windows:
 Navigate to the code/ directory and run the following commands:
+
 python 1_MD_calc_position.py 50  # Set temperature to 50 K
+
 python 2_calc_dipole.py 50 
+
 python 3_calc_IR.py 50 
+
 Each python program will process each .xyz file in the ./inputs/XYZ/ directory one by one.
 
 III. Output Files
 
 1. IR Spectrum: 
 The computed IR spectrum will be saved in the ./outputs/IR_txt/ folder.
+
 Example: ./outputs/IR_txt/C10H8_330.txt contains two columns:
 Column 1: Wavenumber (Freq_MD) in cm^-1
 Column 2: IR absorption intensity (Inten_MD) in 10^5 cm^2 mol^-1.
 A visualization of the IR spectrum is saved as C10H8_330.jpg, with the X-axis representing the wavenumber (cm^-1 and the Y-axis representing the IR absorption intensity (10^5 cm^2 mol^-1).
 
 2. Intermediate Results
+   
 Atomic Trajectories: Saved in intermediate_results/equilibration/ (for NVT) and intermediate_results/VelocityVerlet/ (for NVE). Each line includes: Step Number: The timestep number. Total Energy: The total energy of the molecule at this timestep, in electron volts (eV). Temperature: The temperature at this timestep, in Kelvin (K). Atomic positions (X, Y, Z) for each atom.
+
 Dipole Moments: Saved in intermediate_results/Dipole_txt_mass/, with each row containing the dipole moment components (dipole_x, dipole_y, dipole_z) at a specific time step. The dipole moment components are given in units of e*Angstrom.
 
 
