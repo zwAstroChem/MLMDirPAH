@@ -26,7 +26,9 @@ Instructions
 I. Installation with Anaconda
 
 1. Create and activate a virtual environment:
+
 conda create -n MLMD_env python=3.10.13 # Create a virtual environment
+
 conda activate MLMD_env # Activate the virtual environment
 
 3. Install the required packages:
