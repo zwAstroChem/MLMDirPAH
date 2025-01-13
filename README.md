@@ -126,7 +126,7 @@ The computed IR spectrum will be saved in the ./outputs/IR_txt/ folder.
 Example: ./outputs/IR_txt/C10H8_330.txt contains two columns:
 Column 1: Wavenumber (Freq_MD) in cm^-1
 Column 2: IR absorption intensity (Inten_MD) in 10^5 cm^2 mol^-1.
-A visualization of the IR spectrum is saved as C10H8_330.jpg, with the X-axis representing the wavenumber (cm^-1 and the Y-axis representing the IR absorption intensity (10^5 cm^2 mol^-1).
+A visualization of the IR spectrum is saved as C10H8_330.jpg, with the X-axis representing the wavenumber in cm^-1 and the Y-axis representing the IR absorption intensity in 10^5 cm^2 mol^-1.
 
 2. Intermediate Results
    
