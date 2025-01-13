@@ -67,7 +67,7 @@ pip install oryx==0.2.7
 Note: You may encounter version incompatibility warnings, which can be safely ignored.
 
 7. Install JAX and JAXLib (CPU version):
-8. 
+
 pip install jax[cpu]==0.4.19 -f https://storage.googleapis.com/jax-releases/jax_releases.html
 
 pip install jaxlib==0.4.19 -f https://storage.googleapis.com/jax-releases/jax_releases.html
