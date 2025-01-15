@@ -13,7 +13,7 @@ For more information on the training of these models and the MD simulations, ple
 
 DOI link to article
 
-Authors: Xinghong Mai, Zhao Wang, Lijun Pan, XX, XX, Jesus Carrete, and Georg K. H. Madsen
+Authors: Xinghong Mai, Zhao Wang, Lijun Pan, Johannes Schorghuber, Peter Kovacs, Jesus Carrete, and Georg K. H. Madsen
 
 The code is available at: https://github.com/zwAstroChem/MLMDirPAH
 
